@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         getCurrentDate()
         phase = lunarCalculator.calculatePhase(year, month, day, algorithm)
-        Toast.makeText(this, "Dziś jest $phase faza księżyca", Toast.LENGTH_LONG).show()
+        //Toast.makeText(this, "Dziś jest $phase faza księżyca", Toast.LENGTH_LONG).show()
         Log.d("phase", "This is $phase phase")
         setMoonPhaseImage(phase)
         setPercentage(phase)
@@ -58,14 +58,14 @@ class MainActivity : AppCompatActivity() {
     private fun setMoonPhaseImage(phase: Int) {
         //R.drawable.n10
         //this.imageView.setImageResource(getResources().getIdentifier(location.toLowerCase() + phase.toString() + ".jpg", "drawable", getPackageName())
-        Toast.makeText(this, "Obrazek " + location.toLowerCase() + phase.toString(), Toast.LENGTH_LONG).show()
+        //Toast.makeText(this, "Obrazek " + location.toLowerCase() + phase.toString(), Toast.LENGTH_LONG).show()
         val id = R.mipmap::class.java.getField(location.toLowerCase() + phase.toString()).getInt(null)
         this.imageView.setImageResource(id)
     }
 
     private fun setPercentage(phase: Int) {
         var percantage: Int = (((phase.toDouble()/30)) * 100).toInt()
-        this.textPercentage.setText("Dzisiaj: " + percantage + "%")
+        this.textPercentage.setText("Cykl księżyca: " + percantage + "%")
     }
 
 
@@ -107,7 +107,7 @@ class MainActivity : AppCompatActivity() {
                 if (resultCode == Activity.RESULT_OK) {
                     algorithm = data?.getStringExtra("algorithm")
                     location = data?.getStringExtra("location")
-                    Toast.makeText(this, "Ustawienia: $algorithm $location", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Zapisano ustawienia: $location, $algorithm", Toast.LENGTH_LONG).show()
                 }
             }
         }

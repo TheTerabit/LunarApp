@@ -24,6 +24,7 @@ class AllInYear : AppCompatActivity() {
         setContentView(R.layout.activity_all_in_year)
         algorithm = intent.getStringExtra("algorithm")
         setItemList(getAllFullMoons())
+        listView.requestFocus()
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
