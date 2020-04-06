@@ -16,8 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Settings" />
-        <activity android:name=".AllInYear"></activity>
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".FullMoonsInYearActivity"></activity>
     </application>
 
 </manifest>

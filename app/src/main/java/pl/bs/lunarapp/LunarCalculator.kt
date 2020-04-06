@@ -17,7 +17,7 @@ class LunarCalculator {
             return trig1(year, month, day)
     }
 
-    fun simple(year: Int, month: Int, day: Int): Int {
+    private fun simple(year: Int, month: Int, day: Int): Int {
 
         val lp = 2551443;
         val now = Date(year,month-1,day,20,35,0);

@@ -7,12 +7,10 @@ import android.support.annotation.RequiresApi
 import android.view.View
 import java.time.LocalDate
 import android.widget.ArrayAdapter
-import android.widget.ListView
 import kotlinx.android.synthetic.main.activity_all_in_year.*
-import kotlinx.android.synthetic.main.activity_all_in_year.view.*
 
 
-class AllInYear : AppCompatActivity() {
+class FullMoonsInYearActivity : AppCompatActivity() {
 
     var algorithm: String = ""
     var year: Int = 2020
@@ -61,6 +59,5 @@ class AllInYear : AppCompatActivity() {
         if ((year>1899) && (year <2201))
             setItemList(getAllFullMoons())
     }
-
 
 }
